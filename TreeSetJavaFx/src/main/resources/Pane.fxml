@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane pickOnBounds="false" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainPaneController">
+   <children>
+      <Group layoutX="131.0" layoutY="39.0">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label text="Products basket" />
+                  <TextArea fx:id="productList" prefHeight="178.0" prefWidth="306.0" />
+               </children>
+            </VBox>
+            <Group layoutX="4.0" layoutY="241.0" pickOnBounds="true">
+               <children>
+                  <HBox>
+                     <children>
+                        <TextField fx:id="nameField" />
+                        <TextField fx:id="priceField" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="addButton" layoutX="111.0" layoutY="43.0" mnemonicParsing="false" onMouseClicked="#addToBasketAction" text="Add" />
+                  <Button fx:id="printButton" layoutX="161.0" layoutY="43.0" mnemonicParsing="false" onMousePressed="#clearBasketAction" onMouseReleased="#printBasketAction" text="print" />
+               </children>
+            </Group>
+            <Label layoutX="65.0" layoutY="217.0" text="Name" />
+            <Label layoutX="212.0" layoutY="217.0" text="Price" />
+         </children>
+      </Group>
+      <ImageView fitHeight="89.0" fitWidth="94.0" layoutX="468.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="308.7874984741211" AnchorPane.rightAnchor="38.0">
+         <image>
+            <Image url="@basket.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
