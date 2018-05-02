@@ -12,6 +12,11 @@ public class Tyre {
     private String profile;
     private String diameter;
 
+    public Tyre(String width, String profile, String diameter) {
+        this.width = width;
+        this.profile = profile;
+        this.diameter = diameter;
+    }
     public String getWidth() {
         return width;
     }
@@ -36,11 +41,7 @@ public class Tyre {
         this.diameter = diameter;
     }
 
-    public Tyre(String width, String profile, String diameter) {
-        this.width = width;
-        this.profile = profile;
-        this.diameter = diameter;
-    }
+
 
     @Override
     public String toString() {
